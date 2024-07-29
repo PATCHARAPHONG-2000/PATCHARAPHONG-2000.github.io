@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <base href="/">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+        <meta name="description" content="A new Flutter project.">
+
+        <!-- iOS meta tags & icons -->
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <meta name="apple-mobile-web-app-title" content="back_end">
+        <link rel="apple-touch-icon" href="icons/Icon-192.png">
+
+        <!-- Favicon -->
+        <link rel="icon" type="image/png" href="favicon.png" />
+
+        <title>Dental News - Back</title>
+        <link rel="manifest" href="manifest.json">
+
+        <script>
+            var serviceWorkerVersion = ""3433153525"";
+        </script>
+        <script src="flutter.js" defer></script>
+    </head>
+
+    <body>
+        <script>
+        window.addEventListener('load', function (ev) {
+            // Download main.dart.js
+            FlutterLoader.loadEntrypoint.loadEntrypoint({
+                serviceWorker: {
+                    serviceWorkerVersion: serviceWorkerVersion,
+                },
+                onEntrypointLoaded: function (engineInitializer) {
+                    engineInitializer.initializeEngine().then(function (appRunner) {
+                        appRunner.runApp();
+                    });
+                }
+            });
+        });
+    </script>
+        <input type="file" id="uploadInput" style="display: none;">
+        <script
+            src="https://www.gstatic.com/firebasejs/9.6.1/firebase-storage.js"></script>
+        <script
+            src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
+        <script
+            src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js"></script>
+        <script
+            src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore.js"></script>
+        <script
+            src="https://www.gstatic.com/firebasejs/9.6.1/firebase-storage.js"></script>
+        <script type="module">
+                // Import the functions you need from the SDKs you need
+                import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.3/firebase-app.js";
+                import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.12.3/firebase-analytics.js";
+                // TODO: Add SDKs for Firebase products that you want to use
+                // https://firebase.google.com/docs/web/setup#available-libraries
+              
+                // Your web app's Firebase configuration
+                // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+                const firebaseConfig = {
+                  apiKey: "AIzaSyCyM_bWS4ez_eH3yS49s62K5mfndXOx0Gw",
+                  authDomain: "dentalnews-657c1.firebaseapp.com",
+                  databaseURL: "https://dentalnews-657c1-default-rtdb.asia-southeast1.firebasedatabase.app",
+                  projectId: "dentalnews-657c1",
+                  storageBucket: "dentalnews-657c1.appspot.com",
+                  messagingSenderId: "746041165202",
+                  appId: "1:746041165202:web:1f88d780aaf10e1c7e6d4b",
+                  measurementId: "G-YGJYKZZ0G3"
+                };
+              
+                // Initialize Firebase
+                const app = initializeApp(firebaseConfig);
+                const analytics = getAnalytics(app);
+              </script>
+        <script src="flutter_bootstrap.js" async></script>
+        <script src="main.dart.js" defer></script>
+    </body>
+
+</html>
